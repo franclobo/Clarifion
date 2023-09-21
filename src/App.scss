@@ -57,7 +57,7 @@
 main {
   position: absolute;
   top: 140px;
-  width: 100%;
+  width: 100vw;
   .content {
     .message {
       display: flex;
@@ -461,6 +461,7 @@ main {
             gap: 19px;
             align-self: stretch;
             border-radius: 50px;
+            border: solid 1px #59AE43;
             background: #59AE43;
             color: #FFF;
             font-family: "Manrope", sans-serif;
@@ -555,10 +556,10 @@ footer {
   margin: 0;
   display: inline-flex;
   padding: 24px 119px 24px 127px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  gap: 592px;
   background: #252f3d;
+  width: 100vw;
   .footer__left {
     display: flex;
     gap: 16px;
