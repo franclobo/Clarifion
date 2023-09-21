@@ -33,7 +33,7 @@ export const Navbar = () => {
         <div>
           <img src={Logo} alt="Logo" />
         </div>
-        <div>
+        <div className='antivirus'>
           <img src={McAfee} alt="McAfee" />
           <img src={Norton} alt="Norton" />
         </div>
