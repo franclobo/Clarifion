@@ -43,7 +43,7 @@ We need you to create a working webpage that we can visit with a public URL, tha
 ### Links
 
 - Solution URL: [Test Assignment Solution](https://github.com/franclobo/Clarifion)
-- Live Site URL: [Test Assignment Solution](https://github.com/franclobo/multi-step-form)
+- Live Site URL: [Test Assignment Solution](https://clarifion-test.netlify.app/)
 
 ## My process
 
