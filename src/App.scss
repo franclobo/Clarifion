@@ -3,12 +3,28 @@
   src: url(./assets/fonts/Manrope/Manrope-VariableFont_wght.ttf);
 }
 
+.scroll {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  width: 100vw;
+  margin: 10px 0;
+  padding: 0 5px;
+}
+
 .navbar__black {
-  background-color: #252f3d;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+  background-color: #252f3d;
+  transition: background-color 0.3s ease;
+  &.scrolling {
+    background-color: #000;
+  }
 
   .scroll-arrow {
     display: none;
@@ -23,19 +39,23 @@
       color: #fff;
       font-size: 24px;
       cursor: pointer;
-      position: absolute;
+      position: relative;
       top: 0;
       bottom: 0;
       display: flex;
       align-items: center;
       padding: 0 10px;
+      z-index: -1;
     }
 
     .left-arrow {
+      position: fixed;
       left: 0;
+      z-index: 1;
     }
 
     .right-arrow {
+      position: absolute;
       right: 0;
     }
   }

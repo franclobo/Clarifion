@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
-import Check from '../assets/icons/fluent_checkmark-starburst-20-regular.svg'
-import Truck from '../assets/icons/ph_truck-light.svg'
-import Heart from '../assets/icons/mdi_cards-heart-outline.svg'
-import CheckMark from '../assets/icons/fluent_arrow-sync-checkmark-20-regular.svg'
-import Logo from '../assets/images/Clarifion_Logo.svg'
-import McAfee from '../assets/images/McAfee.svg'
-import Norton from '../assets/images/norton.svg'
-import Left from '../assets/icons/left.svg'
-import Right from '../assets/icons/right.svg'
+import { useEffect, useState } from "react";
+import Check from "../assets/icons/fluent_checkmark-starburst-20-regular.svg";
+import Truck from "../assets/icons/ph_truck-light.svg";
+import Heart from "../assets/icons/mdi_cards-heart-outline.svg";
+import CheckMark from "../assets/icons/fluent_arrow-sync-checkmark-20-regular.svg";
+import Logo from "../assets/images/Clarifion_Logo.svg";
+import McAfee from "../assets/images/McAfee.svg";
+import Norton from "../assets/images/norton.svg";
+import Left from "../assets/icons/left.svg";
+import Right from "../assets/icons/right.svg";
 
 export const Navbar = () => {
   useEffect(() => {
@@ -35,12 +35,36 @@ export const Navbar = () => {
       });
     }
   }, []);
+
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header>
-      <nav className="navbar__black">
+      <nav className="scroll">
         <div className="scroll-arrow left-arrow">
           <img src={Left} alt="Left" id="left-arrow" />
         </div>
+        <div className="scroll-arrow right-arrow">
+          <img src={Right} alt="Right" id="right-arrow" />
+        </div>
+      </nav>
+      <nav className={`navbar__black ${scrolling ? "scrolling" : ""}`}>
         <ul id="navbar_black">
           <li>
             <img src={Check} alt="Check" />
@@ -59,13 +83,11 @@ export const Navbar = () => {
             <p>100% Money back guarantee</p>
           </li>
         </ul>
-        <div className="scroll-arrow right-arrow">
-          <img src={Right} alt="Right" id="right-arrow" />
-        </div>
+
       </nav>
       <nav className="navbar__white">
         <div>
-          <img src={Logo} alt="Logo" className='logo'/>
+          <img src={Logo} alt="Logo" className="logo" />
         </div>
         <div className="antivirus">
           <img src={McAfee} alt="McAfee" />
@@ -74,4 +96,4 @@ export const Navbar = () => {
       </nav>
     </header>
   );
-}
+};
