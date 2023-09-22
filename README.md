@@ -28,7 +28,7 @@ We need you to create a working webpage that we can visit with a public URL, tha
 
 **Instructions:**
 
-1. Recreate the Figma design with your software of choice. Link to Figma: Click Here
+1. Recreate the Figma design with your software of choice. Link to Figma: [Click Here](https://www.figma.com/file/gHf56mhtFr0lXky0poofoQ/ejam---Clarifion-Upsell-%5B-Client-V-%5D-(Copy)?node-id=1%3A137&mode=dev)
 2. You may use any software or page builder you want to recreate the design
 3. Design must also be mobile formatted
 4. Reply to the email that sent you the test assignment with a working link that anyone can view your webpage
