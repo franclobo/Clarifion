@@ -27,26 +27,38 @@ export const Home = () => {
           <ul className="nav__flow__list">
             <li className="nav__flow__list__item">
               <img src={CheckFlow} alt="CheckFlow" />
-              <p>Step 1: Cart Review</p>
+              <p>
+                <span>Step 1:</span> Cart Review
+              </p>
             </li>
             <li className="nav__flow__list__item">
               <img src={CheckFlow} alt="CheckFlow" />
-              <p>Step 2: Checkout</p>
+              <p>
+                <span>Step 2:</span> Checkout
+              </p>
             </li>
             <li className="nav__flow__list__item">
               <p className="step__3">3</p>
-              <p>Step 3: Special Offer</p>
+              <p className='special__offer'>
+                <span>Step 3:</span> Special Offer
+              </p>
             </li>
             <li className="nav__flow__list__item">
               <p className="step__4">4</p>
-              <p>Step 4: Confirmation</p>
+              <p>
+                <span>Step 4:</span> Confirmation
+              </p>
             </li>
           </ul>
         </section>
         <section className="details">
           <div className="comment">
             <div className="img__content">
-              <img src={Description} alt="Description" className="description" />
+              <img
+                src={Description}
+                alt="Description"
+                className="description"
+              />
             </div>
             <div className="ratting">
               <div className="user">
@@ -70,10 +82,11 @@ export const Home = () => {
           </div>
           <div className="specifycations">
             <p className="offer__text">
-              <spam className="time">ONE TIME ONLY</spam> special price for 6
+              <span className="time">ONE TIME ONLY</span> special price for 6
               extra Clarifion for only{" "}
-              <spam className="price__text">$14 each</spam> ($84.00 total!)
+              <span className="price__text">$14 each</span> ($84.00 total!)
             </p>
+            <img src={Description} alt="Description" className="mobile__description" />
             <div className="product">
               <div className="img__content">
                 <img src={Product} alt="Product" className="img__product" />
@@ -135,13 +148,15 @@ export const Home = () => {
                 <img src={RigthArrow} alt="RigthArrow" />
               </button>
               <div className="cards">
-                <p>Free shipping</p>
-                <div className="line"></div>
-                <div className="secure">
-                  <img src={Lock} alt="Lock" />
-                  <p>Secure 256-bit SSL encryption.</p>
+                <div className='payment__mobile'>
+                  <p>Free shipping</p>
+                  <div className="line"></div>
+                  <div className="secure">
+                    <img src={Lock} alt="Lock" />
+                    <p>Secure 256-bit SSL encryption.</p>
+                  </div>
                 </div>
-                <div className="line"></div>
+                <div className="line mobile"></div>
                 <img src={Pay} alt="Pay" />
               </div>
               <p className="thanks">No thanks, I don’t want this.</p>
@@ -149,8 +164,8 @@ export const Home = () => {
             <div className="guarantee">
               <img src={Guarantee} alt="Guarantee" />
               <p className="guarantee__text">
-                If you are not completely thrilled with your Clarifion - We have a
-                <strong>30 day satisfaction guarantee</strong>. Please refer to
+                If you are not completely thrilled with your Clarifion - We have
+                a<strong>30 day satisfaction guarantee</strong>. Please refer to
                 our return policy at the bottom of the page for more details.
                 Happy Shopping!
               </p>
