@@ -13,6 +13,31 @@
   width: 100vw;
   margin: 10px 0;
   padding: 0 5px;
+  .scroll-arrow {
+      display: none;
+    }
+  @media (max-width: 375px) {
+    .scroll-arrow {
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        z-index: -1;
+      }
+
+      .left-arrow {
+        left: 0;
+      }
+
+      .right-arrow {
+        right: 0;
+      }
+  }
 }
 
 .navbar__black {
@@ -21,43 +46,13 @@
   width: 100%;
   z-index: 1;
   background-color: #252f3d;
-  transition: background-color 0.3s ease;
-  &.scrolling {
-    background-color: #000;
-  }
 
-  .scroll-arrow {
-    display: none;
-  }
+
 
   @media (max-width: 375px) {
     overflow-x: scroll;
     overflow-y: hidden;
     width: 375px;
-
-    .scroll-arrow {
-      color: #fff;
-      font-size: 24px;
-      cursor: pointer;
-      position: relative;
-      top: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      padding: 0 10px;
-      z-index: -1;
-    }
-
-    .left-arrow {
-      position: fixed;
-      left: 0;
-      z-index: 1;
-    }
-
-    .right-arrow {
-      position: absolute;
-      right: 0;
-    }
   }
 
   ul {
